@@ -2,11 +2,12 @@ package main
 
 import "fmt"
 
-func index(leng float32, weig float32) {
-	var ind float32
+func index(length float32, weigth float32) {
+
 	var dob float32
-	dob = leng * leng
-	ind = weig / dob
+	dob = length * length
+	var ind float32
+	ind = weigth / dob
 	fmt.Print(ind)
 
 }
