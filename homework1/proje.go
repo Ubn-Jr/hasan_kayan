@@ -3,17 +3,12 @@ package main
 import "fmt"
 
 func index(length float32, weigth float32) {
-
-	var dob float32
-	dob = length * length
-	var ind float32
-	ind = weigth / dob
+	dob := length * length
+	ind := weigth / dob
 	fmt.Print(ind)
-
 }
 
 func main() {
-
 	var weigth float32
 	var length float32
 	fmt.Print("Boyunuzu giriniz metre cinsinden:\n")
