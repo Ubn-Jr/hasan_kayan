@@ -12,17 +12,17 @@ func index(leng float32, weig float32) {
 }
 
 // fet_percent calculates user's fat rate as percent
-func fat_percent(bel float32, age float32, gender float32) float32 {
+func fat_percent(waist float32, age float32, gender float32) float32 {
 
 	if gender == 1 {
-		var percent float32 = 0.567*bel + 0.101*age - 31.8 // male users
+		var percent float32 = 0.567*waist + 0.101*age - 31.8 // male users
 		fmt.Println("Yağ yüzdeniz: %")
 		fmt.Println(percent)
 		return percent
 
 	}
 	if gender == 0 {
-		var percent2 float32 = 0.439*bel + 0.221*age - 9.4 // kfemale users
+		var percent2 float32 = 0.439*waist + 0.221*age - 9.4 // kfemale users
 		fmt.Println("Yağ yüzdeniz: %")
 		fmt.Print(percent2)
 		return percent2
@@ -32,7 +32,7 @@ func fat_percent(bel float32, age float32, gender float32) float32 {
 }
 
 func main() {
-	var bely float32
+	var waist float32
 	var age float32
 	var gender float32
 
@@ -50,13 +50,13 @@ func main() {
 	fmt.Printf("Cinsiyetiniz ERKEK ise '1' e basiniz KADIN ise '0' basiniz:\n")
 	fmt.Scan(&gender)
 	fmt.Printf("Bel cevrenizi giriniz(cm):\n")
-	fmt.Scan(&bely)
+	fmt.Scan(&waist)
 	fmt.Printf("Yasinizi giriniz:\n")
 	fmt.Scan(&age)
 	// calling fat_percent function with user's variables
-	fat_percent(bely, age, gender)
+	fat_percent(waist, age, gender)
 	// defining percent_fat fuınction output as a new variable
-	var percent_fat float32 = fat_percent(bel, age, gender)
+	var percent_fat float32 = fat_percent(waist, age, gender)
 	// using percent_fat variable to give advices to user with conditions
 	if percent_fat > 27 {
 		fmt.Println("Yağ oranınız olması gerekenin üstünde.")
