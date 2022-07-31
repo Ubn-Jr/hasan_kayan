@@ -32,7 +32,7 @@ func fat_percent(bel float32, age float32, gender float32) float32 {
 }
 
 func main() {
-	var bel float32
+	var bely float32
 	var age float32
 	var gender float32
 
@@ -50,11 +50,11 @@ func main() {
 	fmt.Printf("Cinsiyetiniz ERKEK ise '1' e basiniz KADIN ise '0' basiniz:\n")
 	fmt.Scan(&gender)
 	fmt.Printf("Bel cevrenizi giriniz(cm):\n")
-	fmt.Scan(&bel)
+	fmt.Scan(&bely)
 	fmt.Printf("Yasinizi giriniz:\n")
 	fmt.Scan(&age)
 	// calling fat_percent function with user's variables
-	fat_percent(bel, age, gender)
+	fat_percent(bely, age, gender)
 	// defining percent_fat fuınction output as a new variable
 	var percent_fat float32 = fat_percent(bel, age, gender)
 	// using percent_fat variable to give advices to user with conditions
