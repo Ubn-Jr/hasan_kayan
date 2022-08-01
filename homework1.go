@@ -11,6 +11,12 @@ func index(leng float32, weig float32) {
 
 }
 
+//TODO
+//snkae_case yazılım yöntemi benimsenmiştir
+// fakat go için ideal yöntem camelCase yöntemidir
+//tüm değişken ve fonksiyon isimlerinde camelCase kullanmaya özen gösterelim
+//bunun go için özel bir anlamı var bu konu işlenecektir
+
 // fet_percent calculates user's fat rate as percent
 func fat_percent(waist float32, age float32, gender float32) float32 {
 
