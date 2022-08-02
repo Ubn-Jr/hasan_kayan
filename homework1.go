@@ -18,7 +18,7 @@ func index(leng float32, weig float32) {
 //bunun go için özel bir anlamı var bu konu işlenecektir
 
 // fet_percent calculates user's fat rate as percent
-func fat_percent(waist float32, age float32, gender float32) float32 {
+func fatpercent(waist float32, age float32, gender float32) float32 {
 
 	if gender == 1 {
 		var percent float32 = 0.567*waist + 0.101*age - 31.8 // male users
@@ -60,21 +60,21 @@ func main() {
 	fmt.Printf("Yasinizi giriniz:\n")
 	fmt.Scan(&age)
 	// calling fat_percent function with user's variables
-	fat_percent(waist, age, gender)
+	fatpercent(waist, age, gender)
 	// defining percent_fat fuınction output as a new variable
-	var percent_fat float32 = fat_percent(waist, age, gender)
+	var percentfat float32 = fat_percent(waist, age, gender)
 	// using percent_fat variable to give advices to user with conditions
-	if percent_fat > 27 {
+	if percentfat > 27 {
 		fmt.Println("Yağ oranınız olması gerekenin üstünde.")
 		fmt.Println("Karbonhidrat ve yağ alımınızı minimuma indirmeniz ve gereken beslenme listenizi mutlaka alın.")
 	}
-	if percent_fat < 11 && percent_fat > 8 {
+	if percentfat < 11 && percent_fat > 8 {
 
 		fmt.Println("Galiba sporla uğraşıyorsunuz, unutmayın belli bir yağ oranının altı sağlığüınız için zararlıdır, başarılar.")
 
 		fmt.Println("Ortalama yağ oranının altındasınız, klilo almaya yönelik bir diyet düşünebilirsiniz.")
 	}
-	if percent_fat > 14 && percent_fat < 30 {
+	if percentfat > 14 && percent_fat < 30 {
 
 		fmt.Println("Olması gerekn kilo oranındasınız, formunuzu korumaya özen  gösterin.")
 
