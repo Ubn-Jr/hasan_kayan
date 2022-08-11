@@ -3,6 +3,14 @@ package main
 
 import "fmt"
 
+func main() {
+	var numDeci int
+	fmt.Print("Enter the number you want to convert in binary :")
+	fmt.Scan(&numDeci)
+	decimalToBinary(numDeci)
+
+}
+
 //func divides decimal number to 2 and add the reminder in to digits array until decimal cannot divided
 // array has 64 digits, so we can calculate 64 digits of binary
 func decimalToBinary(decimalNumber int) [64]int {
@@ -22,12 +30,4 @@ func decimalToBinary(decimalNumber int) [64]int {
 		fmt.Print(digits[printRange])
 	}
 	return digits
-}
-
-func main() {
-	var numDeci int
-	fmt.Print("Enter the number you want to convert in binary :")
-	fmt.Scan(&numDeci)
-	decimalToBinary(numDeci)
-
 }
